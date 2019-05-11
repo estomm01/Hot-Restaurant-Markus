@@ -19,7 +19,7 @@ var customers = [];
 var waitlist = [];
 
 
-app.get('reserve', function (req, res) {
+app.get('/reserve', function (req, res) {
   res.sendFile(path.join(__dirname, 'reserve.html'));
 });
 
@@ -57,6 +57,12 @@ app.post('/api/new', function(req, res) {
 	res.json(newCustomer);
 });
 
+
+$("#reservation").on("click", function() {(
+  res.sendFile(path.join(__dirname, 'reserve.html'));
+)};
+
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
