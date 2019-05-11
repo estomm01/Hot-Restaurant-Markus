@@ -48,6 +48,7 @@
     </div>
   </nav>
 
+
   <div class="jumbotron jumbotron-fluid text-center" id="banner">
     <h1 class="display-3 text-center">Fired Up: Bar & Grill</h1>
     <p class="lead">We only have five tables. Reserve one before they're gone!</p>
@@ -89,17 +90,9 @@
   <!--jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!--personal js-->
-  <script src="server.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $('#reservation').on('click', function () {
-        res.sendFile(path.join(__dirname, 'reserve.html'));
-      });
-    });
-  </script>
 
 </body>
+
+</script>
 
 </html>
