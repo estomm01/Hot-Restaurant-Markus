@@ -8,7 +8,8 @@ Description:
 
 ## Instructions:
 
-`Phase I:` For this first phase, aim to write out the pieces that will need to be programmed to create the functionality of your application. Try to break it into 6-7 pieces.
+### Phase I:
+For this first phase, aim to write out the pieces that will need to be programmed to create the functionality of your application. Try to break it into 6-7 pieces.
 
 * Create the front-end (visuals) for home page, reservation form, and reservation views.
 
@@ -22,7 +23,8 @@ Description:
 
 * Use jQuery to run AJAX calls to GET and POST data from users to the Express server
 
-`Phase II:` For this second phase, aim to complete the following:
+### Phase II:
+For this second phase, aim to complete the following:
 
 Backend Team:
 
