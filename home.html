@@ -19,7 +19,7 @@
     <h1 class="text-center">Hot Restaurant</h1>
     <h4 class="text-center">Current Reservations and Waiting List</h5>
       <div class="text-center">
-        <button class="btn btn-primary" id="reservation">Make Reservations</button>
+        <a class="btn btn-primary" href= "/reserve">Make Reservations</a>
       </div>
   </div>
 
@@ -64,16 +64,6 @@
   <!--jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!--personal js-->
-  <script src="server.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $('#reservation').on('click', function () {
-        res.sendFile(path.join(__dirname, 'reserve.html'));
-      });
-    });
-  </script>
 
 </body>
 
