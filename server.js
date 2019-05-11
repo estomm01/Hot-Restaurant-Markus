@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/tables', function (req, res) {
-  for (var i = 0; i < customers.length; i++) {
+  for (var i = 5; i < customers.length; i++) {
     res.json(customers[i]);
   }
   return res.json(customers);
