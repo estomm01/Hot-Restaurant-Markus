@@ -47,5 +47,27 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
+<script type = "text/javascript">
+  function runTableQuery(){
+
+  }
+      var currentURL = window.location.origin;
+
+      // // The AJAX function uses the URL of our API to GET
+       $.ajax({url: currentURL + "/api/tables", method: "GET"})
+    	   .done(function(tableData) {
+
+          console.log ("----");
+          console.log("URL: " + currentURL + "/api/tables");
+          console.log("tableData");
+
+          	// Loop through and display each of the customers
+				for (var i=0; i<tableData.length; i++){
+
+					var tableSection = $("<div>");
+
+  </script>
+
+
 
 </html>
