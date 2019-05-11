@@ -19,7 +19,7 @@ var customers = [];
 var waitlist = [];
 
 
-app.get('/', function (req, res) {
+app.get('reserve', function (req, res) {
   res.sendFile(path.join(__dirname, 'reserve.html'));
 });
 
@@ -28,14 +28,14 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/tables', function (req, res) {
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < customers.length; i++) {
     res.json(customers[i]);
   }
   return res.json(customers);
 });
 
 app.get('/api/waitlist', function (req, res) {
-  for (var i = 5; i < customers.length; i++) {
+  for (var i = 0; i < customers.length; i++) {
     res.json(customers[i]);
   }
   return res.json(waitlist);
@@ -55,4 +55,8 @@ app.post('/api/new', function(req, res) {
 		customers.push(newCustomer);
 	}
 	res.json(newCustomer);
+});
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
 });
