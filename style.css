@@ -1,0 +1,32 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background: url(http://www.expertgriller.com/wp-content/themes/longhorn-grilling-season/library/images/longhorn/background-steak-on-grill.png) fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#banner {
+  background: rgba(211, 211, 211, 0.7);
+  padding: 50px 0;
+}
+
+.cards {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.data {
+  margin: auto 10px;
+}
+
+input, label {
+  margin: 10px;
+  max-width: 65rem;
+
+}
+
+.adder {
+  margin: 10px;
+}
