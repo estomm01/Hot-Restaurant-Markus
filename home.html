@@ -8,6 +8,17 @@
 
   <title>Hot Restaurant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/simplex/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1OYccka9EByiS23wvPFiYHBPRAgU91xYVFb8g8sen6vRiBI5Uko6+B87q8zPGUnA" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   </style>
   <link rel="stylesheet" type="javascript" href="server.js">
@@ -15,55 +26,67 @@
 
 <body>
 
-  <div class="jumbotron" id="banner">
-    <h1 class="text-center">Hot Restaurant</h1>
-    <h4 class="text-center">Current Reservations and Waiting List</h5>
-      <div class="text-center">
-        <a class="btn btn-primary" href= "/reserve">Make Reservations</a>
-      </div>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="">Fired Up</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+      aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <br>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api/tables">API Table Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api/waitlist">API Wait List</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="jumbotron jumbotron-fluid text-center" id="banner">
+    <h1 class="display-3 text-center">Fired Up: Bar & Grill</h1>
+    <p class="lead">We only have five tables. Reserve one before they're gone!</p>
+    <div class="text-center">
+      <a href="/reserve"><button class="btn btn-primary btn-lg" id="reservation">Make A Reservation</button></a>
+    </div>
+  </div>
 
   <div class="container">
     <div class="col-lg-12">
-      <div class="card">
+      <div class="card text-white bg-dark mb-3 cards">
         <div class="card-header">
           <h3>Current Reservations</h3>
         </div>
         <div class="card-body">
-          <div class="card">
-            <p> 1 || Frederick Family (placeholder info)</p>
+          <div class="card bg-secondary mb-3 text-dark">
+            <p class="data"> 1 || Frederick Family (placeholder info)</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <br>
-
   <div class="container">
     <div class="col-lg-12">
-      <div class="card">
+      <div class="card text-white bg-dark mb-3 cards">
         <div class="card-header" id="train-head">
           <h3>Waiting List</h3>
         </div>
         <div class="card-body">
-          <div class="card">
-            <p> 1 || Frederick Family (placeholder info)</p>
+          <div class="card bg-secondary mb-3 text-dark">
+            <p class="data"> 1 || Frederick Family (placeholder info)</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <br>
-  <div class="container">
-    <p><a href="/api/tables">API Table Link</a> || <a href="/api/waitlist">API Wait List</a></p>
-  </div>
 
-  <br>
-  <br>
-  <br>
   <!--jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
