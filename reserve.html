@@ -45,6 +45,26 @@
     </div>
   </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newReservation = {
+        name: $("#name").val().trim(),
+        phonenumber: $("#phoneNumber").val().trim(),
+        age: $("#email").val().trim(),
+        customerId: $("#customerId").val().trim()
+      };
+      console.log(newReservation);
+
+      // Question: What does this code do??
+      $.post("/api/tables", newReservation)
+        .then(function(data) {
+          console.log("add.html", data);
+          alert("Adding reservation...");
+        });
+    });
+</script>
+
 </body>
 
 <script type = "text/javascript">
