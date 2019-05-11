@@ -8,17 +8,18 @@
 
   <title>Hot Restaurant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css"></style>
-  <link rel="stylesheet" type= "javascript" href="server.js">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </style>
+  <link rel="stylesheet" type="javascript" href="server.js">
 </head>
 
 <body>
 
   <div class="jumbotron" id="banner">
-      <h1 class="text-center">Hot Restaurant</h1>
-      <h4 class="text-center">Current Reservations and Waiting List</h5>
-        <div class="text-center">
-      <button class="btn btn-primary" id = "reservation">Make Reservations</button>
+    <h1 class="text-center">Hot Restaurant</h1>
+    <h4 class="text-center">Current Reservations and Waiting List</h5>
+      <div class="text-center">
+        <button class="btn btn-primary" id="reservation">Make Reservations</button>
       </div>
   </div>
 
@@ -29,11 +30,11 @@
       <div class="card">
         <div class="card-header">
           <h3>Current Reservations</h3>
-          </div>
+        </div>
         <div class="card-body">
-         <div class="card">
-          <p> 1 || Frederick Family (placeholder info)</p>
-         </div>
+          <div class="card">
+            <p> 1 || Frederick Family (placeholder info)</p>
+          </div>
         </div>
       </div>
     </div>
@@ -49,7 +50,7 @@
         </div>
         <div class="card-body">
           <div class="card">
-           <p> 1 || Frederick Family (placeholder info)</p>
+            <p> 1 || Frederick Family (placeholder info)</p>
           </div>
         </div>
       </div>
@@ -65,6 +66,14 @@
 
   <!--personal js-->
   <script src="server.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#reservation').on('click', function () {
+        res.sendFile(path.join(__dirname, 'reserve.html'));
+      });
+    });
+  </script>
 
 </body>
 
