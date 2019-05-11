@@ -42,9 +42,18 @@ app.get ('/api/waitlist', function (req, res) {
   return res.json (waitlist);
 });
 
-app.post ('/api/clear', function (req, res) {
-  customers = [];
-  waitlist = [];
+app.post ('/api/tables', function (req, res) {
+  var newReserve = req.body;
+
+  // Using a RegEx Pattern to remove spaces from newCharacter
+  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  newReserve.routeName = newReserve.name.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newReserve);
+
+  customers.push(newReserve);
+
+  res.json(newReserve);
 });
 
 app.post ('/api/new', function (req, res) {
