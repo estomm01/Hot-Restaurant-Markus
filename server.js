@@ -55,15 +55,3 @@ app.post ('/api/new', function (req, res) {
   }
   res.json (newCustomer);
 });
-
-$(document).ready(function () {
-  $ ('#reservation').on ('click', function () {
-    res.sendFile (path.join (__dirname, 'reserve.html'));
-  });
-});
-
-
-
-app.listen (PORT, function () {
-  console.log ('App listening on PORT ' + PORT);
-});
